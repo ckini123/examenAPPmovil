@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+    <ion-title>asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="asistencia" (ngSubmit)="crearAsistencia()"></form>
+        <ion-item>
+          <ion-input formControlName="codigo" label="Rut" labelPlacement="stacked" placeholder="Ingrese rut" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input formControlName="fechaClase" label="Rut" labelPlacement="stacked" placeholder="Ingrese rut" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input formControlName="codigoAsignatura" label="Rut" labelPlacement="stacked" placeholder="Ingrese rut" type="text"></ion-input>
+        </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

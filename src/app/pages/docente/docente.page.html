@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Asignaturas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let asig of asignaturas">
+        <ion-item *ngIf="asig.rut_docente == rut_usuario">
+          <ion-label>{{asig.nombre}}</ion-label>
+          <ion-button (click)="generarClase(asig.codigo)">
+            <ion-icon name="home"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
