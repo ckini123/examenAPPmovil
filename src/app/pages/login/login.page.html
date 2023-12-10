@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Asistencia Duoc</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card style="margin: 13%;">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Iniciar Sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="correo" label="Correo" placeholder="Ingrese su correo" labelPlacement="stacked" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="clave_1" label="Clave" placeholder="Ingrese su clave" labelPlacement="stacked" type="password"></ion-input>
+      </ion-item>
+      <div>
+
+        <ion-button (click)="ingresar()" [disabled]="correo=='' || clave_1==''" color="warning" expand="block">Ingresar</ion-button>
+      </div>
+       <ion-button expand="block" color="primary" [routerLink]="['/register']">Registrarse</ion-button>
+       <a href="block" color="primary" style="margin: 13%" [routerLink]="['/restablecer']">Restablecer Contraseña</a>
+
+       <footer>
+        <ion-label style="margin: 35%" color="dark">{{nombrepokemon}}</ion-label>
+      </footer>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-card-header color="primary">
+  <ion-tabs>
+  <ion-tab-bar>
+    <ion-tab-button>
+      <ion-icon (click)="mapa()"  name="map-sharp"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+ </ion-tabs>
+</ion-card-header>
+
+

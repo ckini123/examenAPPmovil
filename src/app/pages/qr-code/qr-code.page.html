@@ -1,0 +1,16 @@
+<ion-header color="warning" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+    <ion-title>QR Clase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" color="primary">
+  <p aling="center">
+    <qrcode class="ion-text-center" [qrdata]="data" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  </p>
+  <ion-header class="ion-text-center">Codigo Clase</ion-header>
+  <ion-header class="ion-text-center">4345</ion-header>
+</ion-content>

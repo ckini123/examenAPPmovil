@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-button (click)="logout()" slot="end" color="danger">Cerrar sesion</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar>
+      <ion-tab-button tab="crud-usuario" *ngIf="usuario.tipo_usuario=='administrador'">
+        <ion-icon name="person-sharp"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="crud-asignatura" *ngIf="usuario.tipo_usuario=='administrador'">
+        <ion-icon name="book"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="docente/{{usuario.rut}}" *ngIf="usuario.tipo_usuario=='docente'">
+        <ion-icon name="book"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="alumno" *ngIf="usuario.tipo_usuario=='alumno'">
+        <ion-icon name="book"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
